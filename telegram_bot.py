@@ -14,8 +14,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def handle_voice(update, context):
     voice = update.message.voice
     file = await context.bot.get_file(voice.file_id)
-    file.download('audio-to-recognize.ogg')
-    update.message.reply_text('Downloading your audio')
+    await file.download_to_drive('audio-to-recognize.ogg')
+    await update.message.reply_text('Downloading your audio')
 
 
 async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
