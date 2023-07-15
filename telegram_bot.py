@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import ContextTypes, CommandHandler, MessageHandler, filters, ApplicationBuilder
 
 TOKEN = 'TOKEN'
-BOT_USERNAME = '@audio_recognizerr_bot'
+BOT_USERNAME = '@audio_recognizer_bot'
 
 
 # Commands

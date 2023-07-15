@@ -8,6 +8,7 @@ def audio_to_text(audio):
     audio_file.export(wav_file, format="wav")
     recognizer = sr.Recognizer()
 
+
     with sr.AudioFile(wav_file) as source:
         audio = recognizer.record(source)
         text = recognizer.recognize_google(audio, language="uk-UA")
