@@ -16,7 +16,7 @@ async def handle_voice(update, context):
     voice = update.message.voice
     file = await context.bot.get_file(voice.file_id)
     await file.download_to_drive('audio-to-recognize.ogg')
-    await update.message.reply_text('Downloading your audio')
+    await update.message.reply_text('Downloading your audio...')
     recognized_text = audio_to_text('audio-to-recognize.ogg')
     await update.message.reply_text('Analyzing the text...')
     await update.message.reply_text(f'Text of the sent audio: \n{recognized_text}')
